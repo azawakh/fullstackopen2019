@@ -1,0 +1,19 @@
+.success-notification {
+  color: green;
+  background: lightgrey;
+  font-size: 1.25rem;
+  border-style: solid;
+  border-radius: 0.3rem;
+  padding: 0.64rem;
+  margin-bottom: 0.64rem;
+}
+
+.error-notification {
+  color: red;
+  background: lightgrey;
+  font-size: 1.25rem;
+  border-style: solid;
+  border-radius: 0.3rem;
+  padding: 0.64rem;
+  margin-bottom: 0.64rem;
+}
