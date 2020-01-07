@@ -31,6 +31,19 @@ app.get("/notes", (req, res) => {
   res.json(notes);
 });
 
+app.get("/notes/:id", (request, response) => {
+  const id = parseInt(request.params.id, 10);
+  const note = notes.find(note => note.id === id);
+  note ? response.json(note) : response.status(404).end();
+});
+
+app.delete("/notes/:id", (request, response) => {
+  const id = parseInt(request.params.id, 10);
+  notes = notes.filter(note => note.id !== id);
+
+  response.status(204).end();
+});
+
 const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
